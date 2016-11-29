@@ -1,0 +1,26 @@
+Setting up a new foundation project
+
+    1. npm install -g bower grunt -cli
+    2. gem install foundation
+    3. gem install compass
+    4. type foundation new project-name
+    5. cd so that your inside the project-name folder
+    6. type compass compile (to compile your scss) or type compass watch (to watch for changes in the scss directory)
+
+Add your own styles
+
+    1. cd into your scss folder
+    2. type notepad _yourstyle.scss (to create a new .scss file and open it)
+    3. add your styles in the _yourstyle.scss
+    4. type notepad app.scss (@import yourstyle)
+    5. cd so that your back inside your project-name folder (root)
+    6. type notepad index.html (add your class names that you created in the _yourstyles.scss file and apply them to your html elements you want)
+
+Update your config.rb file so that you will be able to view the scss version when inspecting your styles in the browser.
+
+    1. cd so that your back inside your project-name folder (root)
+    2. type notepad config.rb
+    3. at the top of the config.rb file type source map = true
+    4. type compass compile (to compile your scss) or type compass watch (to watch for changes in the scss directory)
+    5. Open your browser and inspect an element
+    6. right click on the file source and click show origin sources. (this will give you the ability to toggle between your css and scss stylesheet)
